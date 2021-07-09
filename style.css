@@ -1,18 +1,21 @@
 /* @import url("https://cdn.bootcdn.net/ajax/libs/element-plus/1.0.2-beta.53/theme-chalk/index.css"); */
 
 #app {
-  margin: auto;
+  height: 90vh;
+  width: 100%;
 }
 
 .el-header {
   border-bottom: 1px solid #dcdfe6;
   height: 30px;
+  background-color: blue;
 }
 .el-main {
-  height: calc(100vh - 120px);
+  height: calc(100vh - 130px);
 }
 
 .el-footer {
   border-top: 1px solid #dcdfe6;
   height: 60px;
+  background-color: red;
 }
