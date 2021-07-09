@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Document</title>
+    <title>抽个卡吧</title>
 
     <!-- 引入 Vue3 -->
     <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.1.2/vue.global.js"></script>
@@ -26,10 +26,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="mainWindow">
-
+    <div id="app">
+      <el-container width="width" >
+        <el-header></el-header>
+        <el-main 
+          ><div>
+            <el-scrollbar
+              ><ul>
+                <li class="item" v-for="item in 40">{{ item }}</li>
+              </ul></el-scrollbar
+            >
+          </div>
+        </el-main>
+        <el-footer ><div></div></el-footer>
+      </el-container>
     </div>
-      <!-- 引入核心脚本 -->
+    <!-- 引入核心脚本 -->
     <script src="main.js"></script>
     <script src="app.js"></script>
   </body>
