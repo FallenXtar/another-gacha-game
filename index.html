@@ -27,18 +27,36 @@
   </head>
   <body @touchmove.prevent @mousewhell.prevent>
     <div id="app">
-      <el-container width="width" >
+      <el-container width="width">
         <el-header></el-header>
-        <el-main 
-          ><div>
-            <el-scrollbar
-              ><ul>
-                <li class="item" v-for="item in 40">{{ item }}</li>
-              </ul></el-scrollbar
+        <el-main>
+          <el-scrollbar
             >
-          </div>
+            
+            <ul>
+              <li class="item" v-for="item in 40">{{ item }}</li>
+            </ul></el-scrollbar
+          >
         </el-main>
-        <el-footer ><div></div></el-footer>
+        <el-footer>
+          <ul>
+            <li>
+              <span class="el-icon-s-management b-btn">
+                <span>收集</span>
+              </span>
+            </li>
+            <li>
+              <span class="el-icon-s-home b-btn">
+                <span>主页</span>
+              </span>
+            </li>
+            <li>
+              <span class="el-icon-user-solid b-btn">
+                <span>用户</span>
+              </span>
+            </li>
+          </ul>
+        </el-footer>
       </el-container>
     </div>
     <!-- 引入核心脚本 -->
