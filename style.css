@@ -7,15 +7,37 @@
 
 .el-header {
   border-bottom: 1px solid #dcdfe6;
-  height: 30px;
   background-color: blue;
 }
 .el-main {
   height: calc(100vh - 130px);
+  padding: 0%;
 }
 
 .el-footer {
   border-top: 1px solid #dcdfe6;
   height: 60px;
-  background-color: red;
+}
+.el-footer ul {
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+.el-footer ul li {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  height: 60px;
+  margin-top: 0%;
+}
+
+.b-btn {
+  font-size: 32px;
+  margin-top: 6px;
+  color: #606266;
+}
+.b-btn span {
+  font-size: 16px;
+  display: block;
 }
