@@ -1,5 +1,5 @@
 <template>
-  <div>123</div>
+  <div>核心页面</div>
 </template>
 
 <script>

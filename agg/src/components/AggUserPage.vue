@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div class="user-info">
+    <el-avatar icon="el-icon-user-solid"></el-avatar>
+  </div>
   <ul>
     <li>注册/登录</li>
     <li>设置</li>
@@ -17,6 +19,11 @@ export default {
 </script>
 
 <style scoped>
+.el-avatar {
+  margin: auto;
+  display: block;
+}
+
 ul {
   list-style: none;
   padding-left: 0;

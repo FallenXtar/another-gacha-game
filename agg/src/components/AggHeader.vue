@@ -12,7 +12,13 @@ export default defineComponent({
 
   computed: {
     title() {
-      return this.$store.state.tab;
+      const list = {
+        collection: "收集",
+        home: "主页",
+        user: "用户",
+      };
+
+      return list[this.$store.state.tab];
     },
   },
 });

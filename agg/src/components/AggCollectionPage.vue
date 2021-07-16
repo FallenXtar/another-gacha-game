@@ -1,5 +1,5 @@
 <template>
-  <div>1</div>
+  <div>收集页面</div>
 </template>
 
 <script>

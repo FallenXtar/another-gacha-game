@@ -2,17 +2,23 @@
   <el-footer>
     <ul>
       <li @click="gotoTab('collection')">
-        <span class="el-icon-s-management b-btn">
+        <span
+          class="el-icon-s-management b-btn"
+          :class="{ active: tab == 'collection' }"
+        >
           <span>收集</span>
         </span>
       </li>
       <li @click="gotoTab('home')">
-        <span class="el-icon-s-home b-btn">
+        <span class="el-icon-s-home b-btn" :class="{ active: tab == 'home' }">
           <span>主页</span>
         </span>
       </li>
       <li @click="gotoTab('user')">
-        <span class="el-icon-user-solid b-btn">
+        <span
+          class="el-icon-user-solid b-btn"
+          :class="{ active: tab == 'user' }"
+        >
           <span>用户</span>
         </span>
       </li>
@@ -24,7 +30,13 @@
 import { defineComponent } from "@vue/runtime-core";
 export default defineComponent({
   name: "AggMenuBar",
-  props: {},
+
+  computed: {
+    tab() {
+      return this.$store.state.tab;
+    },
+  },
+
   methods: {
     gotoTab(n) {
       this.$store.commit({
