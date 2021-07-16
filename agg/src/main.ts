@@ -7,4 +7,3 @@ import store from "./store/index";
 const app = createApp(App).use(store).use(ElementPlus);
 
 app.mount("#app");
-
