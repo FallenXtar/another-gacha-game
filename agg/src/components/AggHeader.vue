@@ -1,18 +1,21 @@
 <template>
   <el-header>
-    <h1>{{ tab }}</h1>
+    <h1>{{ title }}</h1>
   </el-header>
 </template>
 
 <script>
-export default {
+import { defineComponent } from "@vue/runtime-core";
+
+export default defineComponent({
   name: "AggHeader",
 
-  props: {
-    tab: String,
+  computed: {
+    title() {
+      return this.$store.state.tab;
+    },
   },
-  methods: {},
-};
+});
 </script>
 
 <style scoped>

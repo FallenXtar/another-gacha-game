@@ -1065,7 +1065,7 @@
   resolved "https://registry.nlark.com/@types/json-schema/download/@types/json-schema-7.0.8.tgz#edf1bf1dbf4e04413ca8e5b17b3b7d7d54b59818"
   integrity sha1-7fG/Hb9OBEE8qOWxezt9fVS1mBg=
 
-"@types/lodash@^4.14.161":
+"@types/lodash@^4.14.161", "@types/lodash@^4.14.171":
   version "4.14.171"
   resolved "https://registry.nlark.com/@types/lodash/download/@types/lodash-4.14.171.tgz#f01b3a5fe3499e34b622c362a46a609fdb23573b"
   integrity sha1-8Bs6X+NJnjS2IsNipGpgn9sjVzs=

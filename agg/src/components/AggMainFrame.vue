@@ -1,16 +1,12 @@
 <template>
   <el-main>
-    <agg-collection-page
-      v-if="tab == 'collection'"
-      :style="activateStatus"
-    ></agg-collection-page>
-    <agg-home-page v-if="tab == 'home'" :style="activateStatus"></agg-home-page>
-    <agg-user-page v-if="tab == 'user'" :style="activateStatus">
-    </agg-user-page>
+    <agg-collection-page v-if="tabs == 'collection'"></agg-collection-page>
+    <agg-home-page v-if="tabs == 'home'"></agg-home-page>
+    <agg-user-page v-if="tabs == 'user'"> </agg-user-page>
   </el-main>
 </template>
 
-<script lang="ts">
+<script>
 import AggCollectionPage from "./AggCollectionPage.vue";
 import AggHomePage from "./AggHomePage.vue";
 import AggUserPage from "./AggUserPage.vue";
@@ -24,20 +20,13 @@ export default defineComponent({
     AggHomePage,
   },
 
-  props: {
-    tab: String,
-  },
-
-  data() {
-    return {
-      activateStatus: {
-        color: "red",
-        fontSize: "13px",
-      },
-    };
-  },
-
   methods: {},
+
+  computed: {
+    tabs() {
+      return this.$store.state.tab;
+    },
+  },
 });
 </script>
 

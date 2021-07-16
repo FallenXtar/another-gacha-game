@@ -1,7 +1,7 @@
 <template>
   <el-container direction="vertical">
-    <agg-header tab="this.currentTab"></agg-header>
-    <agg-main-frame v-model:tab="home"></agg-main-frame>
+    <agg-header tab="store.state.count"></agg-header>
+    <agg-main-frame></agg-main-frame>
     <agg-menu-bar></agg-menu-bar>
   </el-container>
 </template>
