@@ -1,38 +1,39 @@
 <template>
-  <ul>
-    <li @click="settTabs(1)">
-      <span class="el-icon-s-management b-btn">
-        <span>收集</span>
-      </span>
-    </li>
-    <li @click="settTabs(2)">
-      <span class="el-icon-s-home b-btn">
-        <span>主页</span>
-      </span>
-    </li>
-    <li @click="settTabs(3)">
-      <span class="el-icon-user-solid b-btn">
-        <span>用户</span>
-      </span>
-    </li>
-  </ul>
+  <el-footer>
+    <ul>
+      <li @click="this.$parent.tabSwitch(1)">
+        <span class="el-icon-s-management b-btn">
+          <span>收集</span>
+        </span>
+      </li>
+      <li @click="this.$parent.tabSwitch(2)">
+        <span class="el-icon-s-home b-btn">
+          <span>主页</span>
+        </span>
+      </li>
+      <li @click="this.$parent.tabSwitch(3)">
+        <span class="el-icon-user-solid b-btn">
+          <span>用户</span>
+        </span>
+      </li>
+    </ul>
+  </el-footer>
 </template>
 
 <script lang="ts">
-import AggMainFrame from "./AggMainFrame.vue";
-export default {
+import { defineComponent } from "vue";
+export default defineComponent({
   name: "AggMenuBar",
 
   props: {},
-  methods: {
-    settTabs(n: number): void {
-      AggMainFrame.setTabs(n);
-    },
-  },
-};
+  methods: {},
+});
 </script>
 
 <style scoped>
+.el-footer {
+  padding: 0 0;
+}
 ul {
   margin: 0;
   list-style: none;

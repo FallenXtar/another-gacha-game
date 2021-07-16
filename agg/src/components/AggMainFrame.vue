@@ -1,33 +1,44 @@
 <template>
-  <agg-collection-page v-if="tabs == 1"></agg-collection-page>
-  <agg-home-page v-if="tabs == 2"></agg-home-page>
-  <agg-user-page v-if="tabs == 3"> </agg-user-page>
+  <el-main>
+    <agg-collection-page
+      v-if="tab == 'collection'"
+      :style="activateStatus"
+    ></agg-collection-page>
+    <agg-home-page v-if="tab == 'home'" :style="activateStatus"></agg-home-page>
+    <agg-user-page v-if="tab == 'user'" :style="activateStatus">
+    </agg-user-page>
+  </el-main>
 </template>
 
 <script lang="ts">
 import AggCollectionPage from "./AggCollectionPage.vue";
 import AggHomePage from "./AggHomePage.vue";
 import AggUserPage from "./AggUserPage.vue";
+import { defineComponent } from "vue";
 
-export default {
+export default defineComponent({
   name: "AggMainFrame",
   components: {
     AggUserPage,
     AggCollectionPage,
     AggHomePage,
   },
-  data(): unknown {
+
+  props: {
+    tab: String,
+  },
+
+  data() {
     return {
-      tabs: 1,
+      activateStatus: {
+        color: "red",
+        fontSize: "13px",
+      },
     };
   },
-  props: {},
-  methods: {
-    setTabs(n: number): void {
-      this.data.tabs = n;
-    },
-  },
-};
+
+  methods: {},
+});
 </script>
 
 <style scoped>

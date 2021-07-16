@@ -1,8 +1,8 @@
 <template>
-  <el-container>
-    <el-header><agg-header></agg-header></el-header>
-    <el-main> <agg-main-frame></agg-main-frame></el-main>
-    <el-footer> <agg-menu-bar></agg-menu-bar></el-footer>
+  <el-container direction="vertical">
+    <agg-header tab="this.currentTab"></agg-header>
+    <agg-main-frame v-model:tab="home"></agg-main-frame>
+    <agg-menu-bar></agg-menu-bar>
   </el-container>
 </template>
 
@@ -19,6 +19,11 @@ export default defineComponent({
     AggMenuBar,
     AggHeader,
   },
+  data() {
+    return {
+      currentTab: "home",
+    };
+  },
 });
 </script>
 
@@ -29,13 +34,12 @@ export default defineComponent({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  height: 98vh;
-  width: 100%;
+  height: 795px;
+  width: 360px;
   margin: auto;
 }
 
 .el-container {
   height: 100%;
-  flex-direction: column;
 }
 </style>
